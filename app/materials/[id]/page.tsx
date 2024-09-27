@@ -1,8 +1,8 @@
 export default function ProductPage({ params }: { params: { id: string } }) {
-    console.log(params.id)
+    const { id } = params;
     return (
         <div >
-            <h1>Material Details {params.id}</h1>
+            <h1>Material Details {id}</h1>
         </div>
     );
 }
