@@ -12,7 +12,7 @@
 // const { Request, Response, NextFunction } = require("express");
 
 // @ts-ignore
-exports.getProducts = async (req, res, next) => {
+export const getProducts = async (req, res, next) => {
   // export const getProducts: RequestHandler = async (
   //   req: Request,
   //   res: Response,
