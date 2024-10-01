@@ -6,6 +6,7 @@
 // import cors from "cors";
 // import productsRoutes from "./routes/products";
 // import resendRouter from "./routes/resend";
+Object.defineProperty(exports, "__esModule", { value: true });
 // // const express  = require("express")
 // // const cors  = require("cors")
 // const app = express();
@@ -62,16 +63,16 @@ const corsOptions = {
 };
 app.use(cors());
 // app.use(cors({ origin: allowedOrigins, credentials: true }));
-app.use("/products", productsRoutes);
+app.use("/api/products", productsRoutes);
 // app.listen(port, () => {
 //   console.log("Supabase connected");
 //   console.log("Server running on port: " + port);
 // });
-// app.use((req: any, res: any, next: any) => {
-//   console.log(`Request received at: ${req.url}`);
-//   next();
-// });
-app.get("/health", (req, res) => {
+app.use((req, res, next) => {
+    console.log(`Request received at: ${req.url}`);
+    next();
+});
+app.get("/api/health", (req, res) => {
     res.status(200).send("OK");
 });
 const dotenv = require("dotenv");
@@ -82,4 +83,5 @@ app.listen(port, () => {
     console.log("Supabase connected");
     console.log("Server running on port: " + port);
 });
+exports.default = app;
 // module.exports = app;

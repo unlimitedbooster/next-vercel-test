@@ -10,9 +10,7 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "headers": { "Location": "/$1" },
-      "dest": "/api/dist/app.js",
-      "status": 307
+      "dest": "/api/dist/app.js"
     }
   ]
 }

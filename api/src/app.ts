@@ -72,7 +72,7 @@ const corsOptions = {
 app.use(cors());
 // app.use(cors({ origin: allowedOrigins, credentials: true }));
 
-app.use("/products", productsRoutes);
+app.use("/api/products", productsRoutes);
 
 // app.listen(port, () => {
 //   console.log("Supabase connected");
@@ -84,7 +84,7 @@ app.use((req: any, res: any, next: any) => {
   next();
 });
 
-app.get("/health", (req: any, res: any) => {
+app.get("/api/health", (req: any, res: any) => {
   res.status(200).send("OK");
 });
 
