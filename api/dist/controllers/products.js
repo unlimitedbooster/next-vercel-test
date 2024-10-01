@@ -16,12 +16,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getProduct = exports.createProduct = void 0;
+exports.getProduct = exports.createProduct = exports.getProducts = void 0;
 // import createHttpError from "http-errors";
 // import supabase from "../server";
 // const { Request, Response, NextFunction } = require("express");
 // @ts-ignore
-exports.getProducts = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+const getProducts = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     // export const getProducts: RequestHandler = async (
     //   req: Request,
     //   res: Response,
@@ -35,6 +35,7 @@ exports.getProducts = (req, res, next) => __awaiter(void 0, void 0, void 0, func
         next(error);
     }
 });
+exports.getProducts = getProducts;
 //@ts-ignore
 const createProduct = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     const { name, description, imagePath, company, color, category } = req.body;
