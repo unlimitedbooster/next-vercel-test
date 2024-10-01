@@ -5,12 +5,20 @@
       "src": "api/dist/app.js",
       "use": "@vercel/node",
       "config": { "includeFiles": ["api/dist/**"] }
+    },
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/next"
     }
   ],
   "routes": [
     {
-      "src": "api/(.*)",
+      "src": "/api/(.*)",
       "dest": "/api/dist/app.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/$1"
     }
   ]
 }
