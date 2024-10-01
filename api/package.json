@@ -6,7 +6,6 @@
     "clean": "rimraf ./dist",
     "build": "tsc --project tsconfig.json",
     "start": "node dist/app.js",
-    "add-build": "git add dist",
     "devStart": "nodemon src/app.ts"
   },
   "keywords": [],
@@ -33,9 +32,5 @@
     "rimraf": "^5.0.7",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
-  },
-  "pre-commit": [
-      "build",
-      "add-build"
-  ]
+  }
 }

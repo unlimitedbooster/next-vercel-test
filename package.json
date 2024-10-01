@@ -10,7 +10,8 @@
     "start:frontend": "cd frontend && npm start",
     "dev:api": "nodemon api/src/server.ts",
     "dev:frontend": "cd frontend && npm run dev",
-    "dev": "concurrently \"npm run dev:api\" \"npm run dev:frontend\""
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:frontend\"",
+    "add-build": "git add api/dist"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.1.1",
@@ -32,5 +33,9 @@
     "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
-  }
+  },
+  "pre-commit": [
+    "build:api",
+    "add-build"
+]
 }
