@@ -6,14 +6,15 @@
       "use": "@vercel/next"
     },
     {
-      "src": "api/src/server.ts",
-      "use": "@vercel/node"
+      "src": "api/*/**.ts",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["dist/**"] }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/api/src/server.ts"
+      "dest": "/api/dist/server.js"
     },
     {
       "src": "/(.*)",
