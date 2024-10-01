@@ -90,10 +90,6 @@ app.get("/health", (req: any, res: any) => {
 
 const dotenv = require("dotenv");
 dotenv.config();
-// @ts-ignore
-// const express = require("express");
-// @ts-ignore
-const app = require("./app");
 
 // const env = require("./util/validateEnv");
 
