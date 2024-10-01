@@ -10,7 +10,7 @@
     "start:frontend": "cd frontend && npm start",
     "dev:api": "nodemon api/src/server.ts",
     "dev:frontend": "cd frontend && npm run dev",
-    "dev": "concurrently \"npm run dev:api\""
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:frontend\""
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.1.1",

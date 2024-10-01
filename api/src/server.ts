@@ -32,7 +32,7 @@ const app = require("./app");
 
 // const env = require("./util/validateEnv");
 
-const port = process.env.PORT || 3030;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log("Supabase connected");
