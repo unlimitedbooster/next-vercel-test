@@ -11,7 +11,8 @@
     {
       "src": "/api/(.*)",
       "headers": { "Location": "/$1" },
-      "dest": "/api/dist/app.js"
+      "dest": "/api/dist/app.js",
+      "status": 307
     }
   ]
 }
