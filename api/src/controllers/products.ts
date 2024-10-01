@@ -19,7 +19,7 @@ export const getProducts = async (req, res, next) => {
   //   next: NextFunction
   // ) => {
   try {
-    res.stats(200).json({"msg": "hello"});
+    res.status(200).json({"msg": "hello"});
   } catch (error) {
     console.error("Error in getProducts:", error);
     next(error);
