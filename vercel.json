@@ -9,7 +9,7 @@
   ],
   "routes": [
     {
-      "source": "/api",
+      "source": "/api/.*",
       "destination": "/api/dist/app.js"
     }
   ]
