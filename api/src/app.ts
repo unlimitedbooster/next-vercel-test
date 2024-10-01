@@ -88,4 +88,20 @@ app.get("/health", (req: any, res: any) => {
   res.status(200).send("OK");
 });
 
-module.exports = app;
+const dotenv = require("dotenv");
+dotenv.config();
+// @ts-ignore
+// const express = require("express");
+// @ts-ignore
+const app = require("./app");
+
+// const env = require("./util/validateEnv");
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log("Supabase connected");
+  console.log("Server running on port: " + port);
+});
+
+// module.exports = app;
