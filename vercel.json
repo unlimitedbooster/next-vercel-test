@@ -7,10 +7,10 @@
       "config": { "includeFiles": ["api/dist/**"] }
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/api",
-      "destination": "/api/dist/app.js"
+      "src": "/api/(.*)",
+      "dest": "/api/dist/app.js"
     }
   ]
 }
