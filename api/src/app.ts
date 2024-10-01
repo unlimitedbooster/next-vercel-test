@@ -79,10 +79,10 @@ app.use("/products", productsRoutes);
 //   console.log("Server running on port: " + port);
 // });
 
-// app.use((req: any, res: any, next: any) => {
-//   console.log(`Request received at: ${req.url}`);
-//   next();
-// });
+app.use((req: any, res: any, next: any) => {
+  console.log(`Request received at: ${req.url}`);
+  next();
+});
 
 app.get("/health", (req: any, res: any) => {
   res.status(200).send("OK");
