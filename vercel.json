@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/*/**.ts",
+      "src": "api/dist/server.js",
       "use": "@vercel/node",
       "config": { "includeFiles": ["dist/**"] }
     }
