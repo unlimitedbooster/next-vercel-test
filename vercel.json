@@ -2,23 +2,15 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/dist/*/**.js",
+      "src": "api/dist/**",
       "use": "@vercel/node",
       "config": { "includeFiles": ["api/dist/**"] }
-    },
-    {
-      "src": "frontend/package.json",
-      "use": "@vercel/next"
     }
   ],
   "routes": [
     {
-      "src": "/api/health",
+      "src": "/api/*",
       "dest": "/api/dist/app.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/frontend/$1"
     }
   ]
 }
