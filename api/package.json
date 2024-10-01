@@ -1,11 +1,12 @@
 {
   "name": "mrc-api",
   "version": "1.0.0",
-  "main": "src/app.ts",
+  "main": "dist/app.js",
   "scripts": {
     "clean": "rimraf ./dist",
     "build": "tsc --project tsconfig.json",
-    "start": "ts-node src/app.ts",
+    "start": "node dist/app.js",
+    "add-build": "git add dist",
     "devStart": "nodemon src/app.ts"
   },
   "keywords": [],
